@@ -1,0 +1,6 @@
+.container {
+  margin: 11rem auto;
+  @media screen and (max-width: 800px) {
+    margin: 6rem auto;
+  }
+}

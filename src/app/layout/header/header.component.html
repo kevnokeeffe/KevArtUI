@@ -1,21 +1,33 @@
 <div class="container">
   <ng-container>
     <div class="standard-navigation">
+      <div class="logo">
+        <a routerLink="/">
+          <img src="../../../assets/Signiture.svg" />
+        </a>
+      </div>
       <button class="button" mat-button routerLink="/home">Home</button>
-      <button class="button" mat-button routerLink="/home">Bio</button>
-      <button class="button" mat-button routerLink="/home">Works</button>
-      <button class="button" mat-button routerLink="/home">Contact</button>
+      <button class="button" mat-button routerLink="/bio">Bio</button>
+      <button class="button" mat-button routerLink="/works">Works</button>
+      <button class="button" mat-button routerLink="/contact">Contact</button>
     </div>
 
     <div class="responsive-navigation">
+      <div class="logo">
+        <a routerLink="/">
+          <img src="../../../assets/Signiture.svg" />
+        </a>
+      </div>
       <button class="icon-btn" mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon id="icon-menu" [inline]="true">menu</mat-icon>
       </button>
       <mat-menu class="menu" #menu="matMenu">
         <button class="item" mat-menu-item routerLink="/home">Home</button>
-        <button class="item" mat-menu-item routerLink="/home">Bio</button>
-        <button class="item" mat-menu-item routerLink="/home">Works</button>
-        <button class="item" mat-menu-item routerLink="/home">Contact</button>
+        <button class="item" mat-menu-item routerLink="/bio">Bio</button>
+        <button class="item" mat-menu-item routerLink="/works">Works</button>
+        <button class="item" mat-menu-item routerLink="/contact">
+          Contact
+        </button>
       </mat-menu>
     </div>
   </ng-container>

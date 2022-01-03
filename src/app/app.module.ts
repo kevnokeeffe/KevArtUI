@@ -15,6 +15,10 @@ import { LayoutModule } from './layout/layout.module';
 import { BioComponent } from './bio/bio.component';
 import { WorksComponent } from './works/works.component';
 import { ContactComponent } from './contact/contact.component';
+import { WorksModule } from './works/works.module';
+import { ContactModule } from './contact/contact.module';
+import { BioModule } from './bio/bio.module';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +28,15 @@ import { ContactComponent } from './contact/contact.component';
     BioComponent,
     WorksComponent,
     ContactComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+
     HomeModule,
+    WorksModule,
+    ContactModule,
+    BioModule,
     LayoutModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({
@@ -38,6 +46,9 @@ import { ContactComponent } from './contact/contact.component';
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
     BrowserAnimationsModule,
+
+    // AppRouting goes last
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

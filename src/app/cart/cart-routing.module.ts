@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from '../layout/layout/layout.component';
-import { BioComponent } from './bio.component';
+import { CartComponent } from './cart.component';
 
 const routes: Routes = [
   {
     component: LayoutComponent,
-    path: 'bio',
+    path: 'cart',
     children: [
       {
         path: '',
-        component: BioComponent,
+        component: CartComponent,
       },
     ],
   },
@@ -20,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class BioRoutingModule {}
+export class CartRoutingModule {}
