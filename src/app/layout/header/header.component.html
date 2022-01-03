@@ -1,0 +1,22 @@
+<div class="container">
+  <ng-container>
+    <div class="standard-navigation">
+      <button class="button" mat-button routerLink="/home">Home</button>
+      <button class="button" mat-button routerLink="/home">Bio</button>
+      <button class="button" mat-button routerLink="/home">Works</button>
+      <button class="button" mat-button routerLink="/home">Contact</button>
+    </div>
+
+    <div class="responsive-navigation">
+      <button class="icon-btn" mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon id="icon-menu" [inline]="true">menu</mat-icon>
+      </button>
+      <mat-menu class="menu" #menu="matMenu">
+        <button class="item" mat-menu-item routerLink="/home">Home</button>
+        <button class="item" mat-menu-item routerLink="/home">Bio</button>
+        <button class="item" mat-menu-item routerLink="/home">Works</button>
+        <button class="item" mat-menu-item routerLink="/home">Contact</button>
+      </mat-menu>
+    </div>
+  </ng-container>
+</div>
